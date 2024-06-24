@@ -1,0 +1,83 @@
+/* Styles pour la page de modification d'employé */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-47.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Assure que le corps occupe toute la hauteur de la vue */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #3cba92;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #2c7a67;
+}
+
+/* Styles spécifiques au formulaire d'ajout de blâme */
+form[action^="/addBlame"] button {
+    background: #ea3636;
+}
+
+form[action^="/addBlame"] button:hover {
+    background: #ff6f61;
+}

@@ -1,0 +1,72 @@
+{% extends "base.twig" %}
+{% block style %}
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+{% endblock %}
+{% block main %}
+<div class="dashboard-container">
+    <h1>Tableau de bord</h1>
+
+    <!-- Affichage des informations de la société -->
+    <div class="society-info">
+        <h2>Informations sur la société</h2>
+        <p>Nom de la société : {{ user.name }}</p>
+        <p>Numéro de SIRET : {{ user.numberSiret }}</p>
+        <p>Nom du directeur : {{ user.leaderName }}</p>
+        <p>Adresse e-mail : {{ user.email }}</p>
+    </div>
+
+    <!-- Formulaire de recherche d'employé -->
+    <div class="employee-search">
+        <form action="/dashboard" method="GET">
+            <input type="text" name="search" placeholder="Rechercher un employé par nom" value="{{ searchQuery | default('') }}">
+            <button type="submit">Rechercher</button>
+        </form>
+    </div>
+
+    <!-- Liens pour ajouter un employé et se déconnecter -->
+    <div class="dashboard-actions">
+        <ul>
+            <li>
+                <a href="/addEmployee">Ajouter un Employé</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Affichage des employés existants -->
+    <div class="employees-list">
+        <h2>Liste des employés</h2>
+        <ul>
+        {% if employees %}
+            {% for employee in employees %}
+                <li class="employee-item">
+                    <div class="employee-details">
+                        {% if employee.photo %}
+                            <img src="/assets/img/uploads/{{ employee.photo }}" alt="Photo de {{ employee.name }}" class="employee-photo">
+                        {% else %}
+                            <div class="default-photo"></div>
+                        {% endif %}
+                        <div class="employee-info">
+                            <p>Nom: {{ employee.name }}</p>
+                            <p>Fonction: {{ employee.fonction }}</p>
+                            <p>Blâmes: {{ employee.blameCount }}</p>
+                        </div>
+                    </div>
+                    <div class="employee-actions">
+                        <!-- Boutons d'action pour modifier et supprimer l'employé -->
+                        <form action="/editEmployee/{{ employee._id }}" method="GET">
+                            <button type="submit">Modifier</button>
+                        </form>
+                        <form action="/deleteEmployee/{{ employee._id }}" method="POST">
+                            <button type="submit">Supprimer</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>Aucun employé à afficher</p>
+        {% endif %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+/* Styles pour la page d'ajout d'employé */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage horizontal */
+    justify-content: center; /* Centrage vertical */
+    height: 100vh; /* Pleine hauteur de la vue */
+    background-image: url('../img/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-47.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    background: #fff; /* Fond blanc */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.signup-container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+    color: #36384d; /* Couleur de texte sombre */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #36384d; /* Couleur de texte sombre */
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 24px); /* Largeur du champ de saisie */
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #3cba92; /* Couleur verte */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px; /* Marge supplémentaire au-dessus du bouton */
+}
+
+button:hover {
+    background: #2c7a67; /* Couleur verte foncée au survol */
+}
+
+.cancel-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px; /* Espacement entre le bouton Enregistrer et Annuler */
+    color: #ea3636; /* Couleur rouge */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.cancel-button:hover {
+    color: #ff6f61; /* Couleur rouge foncée au survol */
+}

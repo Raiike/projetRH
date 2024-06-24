@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding-top: 50px; /* Adjust if navbar height changes */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #212332; /* Vibrant background color */
+    color: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ea3636; /* Hover color */
+}

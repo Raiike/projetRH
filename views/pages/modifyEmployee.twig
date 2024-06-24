@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+{% block style %}
+    <link rel="stylesheet" href="/assets/css/modifyEmployee.css">
+{% endblock %}
+{% block main %}
+    <section>
+        <h2>Modifier l'employé</h2>
+        <form method="POST" enctype="multipart/form-data" action="/editEmployee/{{ employee._id }}">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="name" value="{{ employee.name }}" required>
+
+            <label for="fonction">Fonction:</label>
+            <input type="text" id="fonction" name="fonction" value="{{ employee.fonction }}" required>
+
+            <label for="blameCount">Nombre de Blâmes:</label>
+            <input type="text" id="blameCount" name="blameCount" value="{{ employee.blameCount }}" required>
+
+            <label for="img">Photo:</label>
+            <input type="file" id="img" name="img">
+
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+
+        <!-- Formulaire pour ajouter un blâme -->
+        <form method="POST" action="/addBlame/{{ employee._id }}">
+            <button type="submit">Ajouter un blâme</button>
+        </form>
+    </section>
+{% endblock %}

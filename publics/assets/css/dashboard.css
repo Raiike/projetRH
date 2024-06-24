@@ -1,0 +1,192 @@
+/* Styles pour le tableau de bord */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-47.gif');
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    background: #36384d; /* Couleur de fond */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Ajustez la largeur selon vos besoins */
+    margin: 20px auto; /* Centrage horizontal */
+    color: #fff; /* Couleur du texte */
+}
+
+.dashboard-container h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.society-info {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.society-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.society-info p {
+    margin-bottom: 5px;
+}
+
+.employee-search {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.employee-search form {
+    display: inline-block;
+    position: relative;
+}
+
+.employee-search input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+}
+
+.employee-search button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #3cba92;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.employee-search button:hover {
+    background-color: #2c7a67;
+}
+
+.dashboard-actions {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-actions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-actions ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dashboard-actions ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #3cba92; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-actions ul li a:hover {
+    background-color: #2c7a67; /* Couleur de fond du bouton au survol */
+}
+
+.employees-list {
+    background: #fff; /* Couleur de fond */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.employee-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Couleur de fond */
+    display: flex;
+    align-items: center;
+}
+
+.employee-item .employee-details {
+    display: flex;
+    align-items: center;
+}
+
+.employee-item .employee-details img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.employee-item .employee-info {
+    margin-top: 0;
+}
+
+.employee-item .employee-info p {
+    margin-bottom: 5px;
+    color: #333; /* Couleur du texte */
+}
+
+.employee-actions {
+    margin-left: auto;
+}
+
+.employee-actions form {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.employee-actions button {
+    padding: 8px 15px;
+    background-color: #3cba92; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.employee-actions button:hover {
+    background-color: #2c7a67; /* Couleur de fond du bouton au survol */
+}
+
+.employee-actions form button {
+    margin-left: 5px;
+}
+
+.employee-actions form button:hover {
+    background-color: #d9534f; /* Couleur de fond du bouton de suppression au survol */
+}
+
+/* Styles pour les messages et les formulaires d'erreur */
+.error-message {
+    color: #d9534f; /* Couleur du message d'erreur */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Styles pour les messages de succès */
+.success-message {
+    color: #5cb85c; /* Couleur du message de succès */
+    font-size: 14px;
+    margin-top: 10px;
+}

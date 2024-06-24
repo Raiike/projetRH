@@ -1,0 +1,22 @@
+{% block style %}
+    <link rel="stylesheet" href="/assets/css/header.css">
+{% endblock %}
+<header>
+    <h1>Ma super app</h1>
+    <nav class="navbar">
+        <ul>
+            {% if user %}
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            {% else %}
+                <li>
+                    <a id="loginButt" href="/login">Login</a>
+                </li>
+                <li>
+                    <a id="registerButt" href="/register">Signin</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
